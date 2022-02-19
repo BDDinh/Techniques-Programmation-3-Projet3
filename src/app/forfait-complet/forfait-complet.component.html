@@ -1,0 +1,38 @@
+<!-- https://edupala.com/how-to-implement-angular-material-card/ -->
+
+<div class="container">
+  <mat-card class="mini-forfait-card">
+    <mat-card-header>
+      <mat-card-title>Destination: {{forfaitCible.destination}}</mat-card-title>
+      <mat-card-subtitle>Ville départ: {{forfaitCible.villeDepart}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <hr>
+
+    <mat-card-content>
+      <p>Hotel: {{forfaitCible.hotel.nom}}</p>
+      <p>Coordonnées: {{forfaitCible.hotel.coordonnees}}</p>
+      <p>Nom de chambres: {{forfaitCible.hotel.nombreChambres}}</p>
+      <p>Caractéristiques: {{forfaitCible.hotel.caracteristiques.join(", ") }}</p>
+
+      <p>
+        <app-evaluation-etoiles [rating]="evalationNombreEtoiles"></app-evaluation-etoiles>
+      </p>
+
+      <hr>
+
+      <p>Départ le: {{forfaitCible.dateDepart}}</p>
+      <p>Retour le: {{forfaitCible.dateRetour}}</p>
+      <p [ngClass]="{'backgroundVert' : forfaitCible.vedette}">Forfait vedette: {{forfaitCible.vedette?'oui':'non'}}</p>
+      <p>
+        <span [ngClass]="{'texteBarre' : forfaitCible.rabais >0}">Prix: {{forfaitCible.prix | currency:'CAD'}}</span>
+        <span *ngIf="forfaitCible.rabais >0"> - Prix avec rabais:
+          {{ (forfaitCible.prix - forfaitCible.rabais  | currency:'CAD')}}</span>
+      </p>
+    </mat-card-content>
+    <mat-card-footer>
+
+    </mat-card-footer>
+  </mat-card>
+</div>
+<br />

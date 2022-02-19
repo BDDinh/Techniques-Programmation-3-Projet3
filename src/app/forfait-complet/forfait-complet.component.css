@@ -1,0 +1,12 @@
+hr {
+  border-top: 1px solid rgb(117, 117, 117);
+}
+
+.backgroundVert {
+  color: white;
+  background-color: green;
+}
+
+.texteBarre {
+  text-decoration: line-through;
+}

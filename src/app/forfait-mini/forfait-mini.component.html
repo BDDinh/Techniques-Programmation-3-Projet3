@@ -1,0 +1,19 @@
+<mat-card class="forfait-mini-card">
+  <mat-card-title>Destination: {{forfaitCible.destination}}</mat-card-title>
+  <mat-card-subtitle>Ville départ: {{forfaitCible.villeDepart}}</mat-card-subtitle>
+
+  <mat-card-content>
+    <p>Hotel: {{forfaitCible.hotel.nom}}</p>
+    <p>
+      <app-evaluation-etoiles [rating]="evalationNombreEtoiles"></app-evaluation-etoiles>
+    </p>
+    <p>
+      <span [ngClass]="{'texteBarre' : forfaitCible.rabais >0}">Prix: {{forfaitCible.prix | currency:'CAD'}}</span>
+      <span *ngIf="forfaitCible.rabais >0"> - Prix avec rabais:
+        {{ (forfaitCible.prix - forfaitCible.rabais  | currency:'CAD')}}</span>
+    </p>
+    <p>Départ le: {{forfaitCible.dateDepart}}</p>
+    <p>Durée: {{duree}} jours</p>
+  </mat-card-content>
+</mat-card>
+<br *ngIf="forfaitCible.vedette" />
