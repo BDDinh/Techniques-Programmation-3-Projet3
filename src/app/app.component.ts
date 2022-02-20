@@ -12,10 +12,10 @@ import {Forfait} from './interfaces/forfait';
 export class AppComponent {
   constructor(private forfaitService: ForfaitService) { }
 
-  title = 'app-voyages-Dinh';
-  forfaits: Forfait[] = [];
+  titre = 'Projet final';
+  //forfaits: Forfait[] = [];
 
   ngOnInit(){
-    this.forfaits = this.forfaitService.getForfaits();
+    //this.forfaits = this.forfaitService.getForfaits();
   }
 }

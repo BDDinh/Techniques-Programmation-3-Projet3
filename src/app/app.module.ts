@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ForfaitService } from './services/forfait.service';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PiedPageComponent } from './pied-page/pied-page.component';
 import { EnteteComponent } from './entete/entete.component';
 import { ForfaitMiniComponent } from './forfait-mini/forfait-mini.component';
 import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.component';
@@ -25,14 +27,15 @@ import { TableForfaitsComponent } from './table-forfaits/table-forfaits.componen
 import { LienDetailsComponent } from './lien-details/lien-details.component';
 import { NomDescriptionComponent } from './nom-description/nom-description.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
-
-
+import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
+import { AProposComponent } from './a-propos/a-propos.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EnteteComponent,
+    PiedPageComponent,
     ForfaitMiniComponent,
     ForfaitCompletComponent,
     EvaluationEtoilesComponent,
@@ -45,6 +48,8 @@ import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forf
     LienDetailsComponent,
     NomDescriptionComponent,
     FormulaireForfaitComponent,
+    ListeForfaitsComponent,
+    AProposComponent,
 
   ],
   imports: [
@@ -58,7 +63,7 @@ import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forf
     MatInputModule,
     MatDialogModule,
   ],
-  providers: [],
+  providers: [ForfaitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
