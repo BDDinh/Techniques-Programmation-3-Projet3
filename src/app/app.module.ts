@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ForfaitService } from './services/forfait.service';
+import { FormsModule } from '@angular/forms';
 
 import { MatTableModule } from '@angular/material/table';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
@@ -53,6 +55,7 @@ import { AProposComponent } from './a-propos/a-propos.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     NoopAnimationsModule,
@@ -62,6 +65,7 @@ import { AProposComponent } from './a-propos/a-propos.component';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
+    MatCheckboxModule,
   ],
   providers: [ForfaitService],
   bootstrap: [AppComponent]

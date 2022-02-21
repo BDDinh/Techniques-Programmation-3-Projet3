@@ -88,7 +88,7 @@ export const FORFAITS: Forfait[] = [
     },
     {
         id:"6",
-        destination : 'Saint-Barth',
+        destination : 'Cuba',
         villeDepart : 'Montréal', 
         hotel :{
             nom : 'Best Inn',

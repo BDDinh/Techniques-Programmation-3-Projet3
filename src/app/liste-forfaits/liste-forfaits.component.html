@@ -6,6 +6,18 @@
   </div>
 </div>
 
-<div *ngFor="let forfait of forfaits;">
+<h2>Tous les forfaits</h2>
+<div *ngFor="let forfait of forfaits">
+  <app-forfait-complet [forfaitCible]=forfait></app-forfait-complet>
+</div>
+
+
+<h2>Tous les forfaits mexicains</h2>
+<div *ngFor="let forfait of forfaitsMexicains">
+  <app-forfait-complet [forfaitCible]=forfait></app-forfait-complet>
+</div>
+
+<h2>Tous les forfaits cubains</h2>
+<div *ngFor="let forfait of forfaitsCubains">
   <app-forfait-complet [forfaitCible]=forfait></app-forfait-complet>
 </div>

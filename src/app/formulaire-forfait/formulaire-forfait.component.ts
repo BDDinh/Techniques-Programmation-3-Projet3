@@ -13,9 +13,12 @@ export class FormulaireForfaitComponent implements OnInit {
   @Input() forfait: Forfait = <Forfait>{}; 
   @Output() majTableau = new EventEmitter();
 
+  evalationNombreEtoiles:number = 0;
+
   constructor(private forfaitService: ForfaitService) { }
 
   ngOnInit(): void {
+    this.evalationNombreEtoiles = this.forfait.hotel.nombreEtoiles;
   }
 
   onSave(forfaitForm: NgForm) {

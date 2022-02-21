@@ -37,7 +37,7 @@ export class TableForfaitsComponent implements OnInit {
       this.selectedForfait = forfait;
     }
     const dialogRef = this.dialog.open(DialogFormulaireForfaitsComponent, {
-      width: '500px',
+      width: '1000px',
       data: this.selectedForfait,
     });
 
