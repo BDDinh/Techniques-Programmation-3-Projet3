@@ -7,7 +7,6 @@
       <mat-error
         *ngIf="destination.invalid && (destination.dirty || destination.touched) && destination.hasError('required')">La
         destination est obligatoire.</mat-error>
-      <span matSuffix>$&nbsp;</span>
     </mat-form-field>
 
     <mat-form-field required appearance="fill" class="full-width">
@@ -17,7 +16,6 @@
       <mat-error
         *ngIf="villeDepart.invalid && (villeDepart.dirty || villeDepart.touched) && villeDepart.hasError('required')">La
         ville de départ est obligatoire.</mat-error>
-      <span matSuffix>$&nbsp;</span>
     </mat-form-field>
 
     <mat-form-field required appearance="fill" class="full-width">
@@ -56,12 +54,9 @@
       <span matSuffix>$&nbsp;</span>
     </mat-form-field>
 
-    <mat-form-field required appearance="fill" class="full-width">
-      <mat-label>Forfait vedette</mat-label>
+    <div id="divVedette">
       <mat-checkbox [(ngModel)]="forfait.vedette" name="{{forfait.vedette}}">Vedette</mat-checkbox>
-      <span matSuffix>$&nbsp;</span>
-    </mat-form-field>
-
+    </div>
 
     <!--     
     ====================================
@@ -70,6 +65,7 @@
     -->
 
     <section>
+      <h4>------------------</h4>
       <h4>Section hotel</h4>
 
       <mat-form-field required appearance="fill" class="full-width">
@@ -78,7 +74,6 @@
           placeholder="Hilton Cancun">
         <mat-error *ngIf="nomHotel.invalid && (nomHotel.dirty || nomHotel.touched) && nomHotel.hasError('required')">Le
           nom de l'hotel est obligatoire.</mat-error>
-        <span matSuffix>$&nbsp;</span>
       </mat-form-field>
 
       <mat-form-field required appearance="fill" class="full-width">
@@ -88,7 +83,6 @@
         <mat-error
           *ngIf="coordonneesHotel.invalid && (coordonneesHotel.dirty || coordonneesHotel.touched) && coordonneesHotel.hasError('required')">
           Les coordonnées de l'hotel est obligatoire.</mat-error>
-        <span matSuffix>$&nbsp;</span>
       </mat-form-field>
 
       <p>
@@ -101,7 +95,6 @@
           type="number" step=".50" matInput placeholder="Ex. 3.5">
         <mat-error *ngIf="nombreEtoilesHotel.invalid && (nombreEtoilesHotel.dirty || nombreEtoilesHotel.touched) &&
           nombreEtoilesHotel.hasError('required')">Le nombre d'étoiles est obligatoire.</mat-error>
-        <span matSuffix>$&nbsp;</span>
       </mat-form-field>
 
       <mat-form-field required appearance="fill" class="full-width">
@@ -110,7 +103,6 @@
           required type="number" step="1" matInput placeholder="Ex. 5">
         <mat-error *ngIf=" nombreChambresHotel.invalid && (nombreChambresHotel.dirty || nombreChambresHotel.touched) &&
           nombreChambresHotel.hasError('required')">Le nombre de chambre est obligatoire.</mat-error>
-        <span matSuffix>$&nbsp;</span>
       </mat-form-field>
 
       <mat-form-field required appearance="fill" class="full-width">
@@ -119,7 +111,6 @@
           required type="number" step="1" matInput placeholder="Ex. Face à la plage">
         <mat-error *ngIf=" caracteristiquesHotel.invalid && (caracteristiquesHotel.dirty || caracteristiquesHotel.touched) &&
         caracteristiquesHotel.hasError('required')">Les caractéristiques sont obligatoires.</mat-error>
-        <span matSuffix>$&nbsp;</span>
       </mat-form-field>
     </section>
 

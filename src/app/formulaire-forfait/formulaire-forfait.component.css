@@ -13,3 +13,8 @@ form {
 .half-width {
   width: 85%;
 }
+
+#divVedette {
+  margin-left: 10px;
+  margin-bottom: 15px;
+}

@@ -32,7 +32,6 @@ export class FormulaireForfaitComponent implements OnInit {
         this.forfaitService.addForfait(this.forfait).subscribe(_ => { this.majTableau.emit() });
       }
     }
-      
   }
 
   onCancel() { 
