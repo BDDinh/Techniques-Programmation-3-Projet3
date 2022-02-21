@@ -10,6 +10,8 @@ import { ForfaitService } from '../services/forfait.service';
 export class ListeForfaitsComponent implements OnInit {
   titre = 'Liste produits';
   forfaits : Forfait[] = [];
+  forfaitsMexicains : Forfait[] = [];
+  forfaitsCubains: Forfait[] = [];
 
   constructor(private forfaitService:ForfaitService) { }
 
@@ -18,7 +20,10 @@ export class ListeForfaitsComponent implements OnInit {
   }
 
   getForfaits(): void {
-    this.forfaitService.getForfaits()
-      .subscribe(resultat => this.forfaits = resultat);
+    this.forfaitService.getForfaits().subscribe(resultat =>{ this.forfaits = resultat;
+                                                             this.forfaitsMexicains = this.forfaits.filter( f => f.destination === 'Mexique');
+                                                             this.forfaitsCubains = this.forfaits.filter( f => f.destination === 'Cuba');
+                                                           });
+  
   }
-}
+}// Fin ListeForfaitsComponent
