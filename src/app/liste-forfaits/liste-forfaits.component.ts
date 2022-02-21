@@ -5,7 +5,7 @@ import { ForfaitService } from '../services/forfait.service';
 @Component({
   selector: 'app-liste-forfaits',
   templateUrl: './liste-forfaits.component.html',
-  styleUrls: ['./liste-forfaits.component.css']
+  styleUrls: ['../shared/shared-styles.css','./liste-forfaits.component.css']
 })
 export class ListeForfaitsComponent implements OnInit {
   titre = 'Liste produits';
