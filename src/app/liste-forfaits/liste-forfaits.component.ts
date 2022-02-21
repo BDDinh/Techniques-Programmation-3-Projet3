@@ -8,10 +8,8 @@ import { ForfaitService } from '../services/forfait.service';
   styleUrls: ['../shared/shared-styles.css','./liste-forfaits.component.css']
 })
 export class ListeForfaitsComponent implements OnInit {
-  titre = 'Liste produits';
+  titre = 'Accueil';
   forfaits : Forfait[] = [];
-  forfaitsMexicains : Forfait[] = [];
-  forfaitsCubains: Forfait[] = [];
 
   constructor(private forfaitService:ForfaitService) { }
 
@@ -20,10 +18,6 @@ export class ListeForfaitsComponent implements OnInit {
   }
 
   getForfaits(): void {
-    this.forfaitService.getForfaits().subscribe(resultat => { this.forfaits = resultat;
-                                                              this.forfaitsMexicains = this.forfaits.filter( f => f.destination === 'Mexique');
-                                                              this.forfaitsCubains = this.forfaits.filter( f => f.destination === 'Cuba');
-                                                            });
-  
+    this.forfaitService.getForfaits().subscribe(resultat => { this.forfaits = resultat; });
   }
 }// Fin ListeForfaitsComponent

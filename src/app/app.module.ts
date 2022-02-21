@@ -29,6 +29,7 @@ import { LienDetailsComponent } from './lien-details/lien-details.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
 import { AProposComponent } from './a-propos/a-propos.component';
+import { ListeForfaitsPaysComponent } from './liste-forfaits-pays/liste-forfaits-pays.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { AProposComponent } from './a-propos/a-propos.component';
     FormulaireForfaitComponent,
     ListeForfaitsComponent,
     AProposComponent,
+    ListeForfaitsPaysComponent,
 
   ],
   imports: [
