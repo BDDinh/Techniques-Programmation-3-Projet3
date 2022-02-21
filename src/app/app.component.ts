@@ -12,10 +12,8 @@ import {Forfait} from './interfaces/forfait';
 export class AppComponent {
   constructor(private forfaitService: ForfaitService) { }
 
-  titre = 'Projet final';
-  //forfaits: Forfait[] = [];
+  titre = 'Projet final Angular';
 
   ngOnInit(){
-    //this.forfaits = this.forfaitService.getForfaits();
   }
 }
