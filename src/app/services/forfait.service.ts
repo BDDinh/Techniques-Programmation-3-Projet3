@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders  } from '@angular/common/http';
-import {Forfait} from '../interfaces/forfait';
-import { FORFAITS } from '../mock-forfaits';
+import { Forfait } from '../interfaces/forfait';
+import { FORFAITS } from '../mocks/mock-forfaits';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 

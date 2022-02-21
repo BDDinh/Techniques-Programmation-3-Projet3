@@ -1,4 +1,4 @@
-import {Forfait} from './interfaces/forfait';
+import {Forfait} from '../interfaces/forfait';
 
 export const FORFAITS: Forfait[] = [
     {
