@@ -27,7 +27,6 @@ import { ForfaitMiniCandidatPipe } from './forfait-mini-candidat.pipe';
 import { DialogFormulaireForfaitsComponent } from './dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
 import { TableForfaitsComponent } from './table-forfaits/table-forfaits.component';
 import { LienDetailsComponent } from './lien-details/lien-details.component';
-import { NomDescriptionComponent } from './nom-description/nom-description.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
 import { AProposComponent } from './a-propos/a-propos.component';
@@ -47,7 +46,6 @@ import { AProposComponent } from './a-propos/a-propos.component';
     DialogFormulaireForfaitsComponent,
     TableForfaitsComponent,
     LienDetailsComponent,
-    NomDescriptionComponent,
     FormulaireForfaitComponent,
     ListeForfaitsComponent,
     AProposComponent,
