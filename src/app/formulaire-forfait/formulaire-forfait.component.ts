@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Forfait } from '../interfaces/forfait';
+import { ForfaitService } from '../services/forfait.service';
 
 @Component({
   selector: 'app-formulaire-forfait',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulaireForfaitComponent implements OnInit {
 
-  constructor() { }
+  @Input() forfait: Forfait = <Forfait>{}; 
+  @Output() majTableau = new EventEmitter();
+
+  constructor(private forfaitService: ForfaitService) { }
 
   ngOnInit(): void {
   }
 
+  onSave(forfaitForm: NgForm) {
+    if (forfaitForm.valid) {
+      if (this.forfait.id != null && this.forfait.id != '') {
+        // Si on a un id, on doit modifier le forfait
+        this.forfaitService.editForfait(this.forfait).subscribe(_ => { this.majTableau.emit() });
+
+      } else { 
+        // Sinon, on doit ajouter le forfait
+        this.forfaitService.addForfait(this.forfait).subscribe(_ => { this.majTableau.emit() });
+      }
+    }
+      
+  }
+
+  onCancel() { 
+    this.majTableau.emit();
+  }
 }

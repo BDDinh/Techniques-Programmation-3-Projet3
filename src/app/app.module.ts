@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { ForfaitService } from './services/forfait.service';
 
 import { MatTableModule } from '@angular/material/table';
@@ -55,10 +56,11 @@ import { AProposComponent } from './a-propos/a-propos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatCardModule,
-    MatButtonModule,
+    HttpClientModule,
     NoopAnimationsModule,
     MatTableModule,
+    MatCardModule,
+    MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,

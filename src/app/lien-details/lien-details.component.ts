@@ -11,5 +11,4 @@ export class LienDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

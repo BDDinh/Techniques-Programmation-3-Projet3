@@ -13,32 +13,25 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ForfaitService {
-  // produitsUrl = 'http://localhost/exemple-api-produits/api/'; // Changer ici
+  forfaitsUrl = 'http://localhost/exemple-api-forfaits/api/'; // Changer ici
 
-  constructor() { }
-
-/*   
-  getForfaits(): Forfait[] {
-    const forfaits = FORFAITS;
-    //return forfaits;
-  }
- */
+  constructor(private http: HttpClient) { }
+  //constructor() { }
 
   getForfaits(): Observable<Forfait[]> {
     const forfaits = FORFAITS;
     return of(FORFAITS);
   }
-  /*
-  addProduit(produit: Produit): Observable<Produit> {
-    return this.http.post<Produit>(this.produitsUrl, produit, httpOptions);
+  
+  addForfait(forfait: Forfait): Observable<Forfait> {
+    return this.http.post<Forfait>(this.forfaitsUrl, forfait, httpOptions);
   }
 
-  editProduit(produit: Produit): Observable<Produit> {
-    return this.http.put<Produit>(this.produitsUrl + "?id=" + produit.id, produit, httpOptions);
+  editForfait(forfait: Forfait): Observable<Forfait> {
+    return this.http.put<Forfait>(this.forfaitsUrl + "?id=" + forfait.id, forfait, httpOptions);
   }
 
-  deleteProduit(id: string): Observable<Produit> {
-    return this.http.delete<Produit>(this.produitsUrl + "?id=" +  id);
-  }
-  */
+  deleteForfait(id: string): Observable<Forfait> {
+    return this.http.delete<Forfait>(this.forfaitsUrl + "?id=" +  id);
+  } 
 }

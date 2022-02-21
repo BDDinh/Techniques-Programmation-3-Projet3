@@ -2,6 +2,7 @@ import {Forfait} from './interfaces/forfait';
 
 export const FORFAITS: Forfait[] = [
     {
+        id:"1",
         destination : 'Mexique',
         villeDepart : 'Québec', 
         hotel :{
@@ -18,6 +19,7 @@ export const FORFAITS: Forfait[] = [
         vedette : false
     },
     {
+        id:"2",
         destination : 'Paraguay',
         villeDepart : 'Montréal', 
         hotel :{
@@ -34,6 +36,7 @@ export const FORFAITS: Forfait[] = [
         vedette : true
     },
     {
+        id:"3",
         destination : 'Paris',
         villeDepart : 'Toronto', 
         hotel :{
@@ -50,6 +53,7 @@ export const FORFAITS: Forfait[] = [
         vedette : false
     },
     {
+        id:"4",
         destination : 'Londres (UK)',
         villeDepart : 'Montreal', 
         hotel :{
@@ -66,6 +70,7 @@ export const FORFAITS: Forfait[] = [
         vedette : true
     },
     {
+        id:"5",
         destination : 'Barcelone',
         villeDepart : 'Montreal', 
         hotel :{
@@ -82,6 +87,7 @@ export const FORFAITS: Forfait[] = [
         vedette : true
     },
     {
+        id:"6",
         destination : 'Saint-Barth',
         villeDepart : 'Montréal', 
         hotel :{

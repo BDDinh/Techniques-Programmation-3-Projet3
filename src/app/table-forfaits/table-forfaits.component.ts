@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogFormulaireForfaitsComponent } from '../dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
+import { ForfaitService } from '../services/forfait.service';
+import { Forfait } from '../interfaces/forfait';
 
 @Component({
   selector: 'app-table-forfaits',
@@ -6,10 +10,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-forfaits.component.css']
 })
 export class TableForfaitsComponent implements OnInit {
+  forfaits: Forfait[] = [];
+  selectedForfait?: Forfait;
+  columnsToDisplay = ['destination', 'villeDepart', 'prix', 'actions'];
 
-  constructor() { }
+  constructor(private forfaitService: ForfaitService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.getForfaits();
   }
 
-}
+  getForfaits(): void {
+    this.forfaitService.getForfaits()
+      .subscribe(resultat => this.forfaits = resultat);
+  }
+
+  onDelete(forfait: Forfait): void {
+    this.forfaitService.deleteForfait(forfait.id)
+      .subscribe(result => this.forfaits = this.forfaits.filter(p => p !== forfait));
+  }
+
+  onSelect(forfait?: Forfait) {
+    if (!forfait) {
+      this.selectedForfait = <Forfait>{}; // {} as Forfait;
+    } else { 
+      this.selectedForfait = forfait;
+    }
+    const dialogRef = this.dialog.open(DialogFormulaireForfaitsComponent, {
+      width: '500px',
+      data: this.selectedForfait,
+    });
+
+    dialogRef.afterClosed().subscribe(_ => {
+      this.selectedForfait = undefined;
+      this.getForfaits();
+    });
+  }
+}// Fin TableForfaitsComponent
