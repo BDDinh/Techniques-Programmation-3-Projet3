@@ -3,7 +3,7 @@
     <mat-form-field required appearance="fill" class="full-width">
       <mat-label>Destination du forfait</mat-label>
       <input name="destination" [(ngModel)]="forfait.destination" #destination="ngModel" matInput required
-        placeholder="Paris">
+        placeholder="Ex. Paris">
       <mat-error
         *ngIf="destination.invalid && (destination.dirty || destination.touched) && destination.hasError('required')">La
         destination est obligatoire.</mat-error>
@@ -13,7 +13,7 @@
     <mat-form-field required appearance="fill" class="full-width">
       <mat-label>Ville de départ du forfait</mat-label>
       <input name="villeDepart" [(ngModel)]="forfait.villeDepart" #villeDepart="ngModel" matInput required
-        placeholder="Montréal">
+        placeholder="Ex. Montréal">
       <mat-error
         *ngIf="villeDepart.invalid && (villeDepart.dirty || villeDepart.touched) && villeDepart.hasError('required')">La
         ville de départ est obligatoire.</mat-error>
@@ -23,7 +23,7 @@
     <mat-form-field required appearance="fill" class="full-width">
       <mat-label>Date de départ</mat-label>
       <input name="dateDepart" [(ngModel)]="forfait.dateDepart" #dateDepart="ngModel" matInput required
-        placeholder="2020-12-20">
+        placeholder="Ex. 2020-12-20">
       <mat-error
         *ngIf="dateDepart.invalid && (dateDepart.dirty || dateDepart.touched) && dateDepart.hasError('required')">La
         date de départ est obligatoire.</mat-error>
@@ -32,7 +32,7 @@
     <mat-form-field required appearance="fill" class="full-width">
       <mat-label>Date de retour</mat-label>
       <input name="dateRetour" [(ngModel)]="forfait.dateRetour" #dateRetour="ngModel" matInput required
-        placeholder="2020-12-30">
+        placeholder="Ex. 2020-12-30">
       <mat-error
         *ngIf="dateRetour.invalid && (dateRetour.dirty || dateRetour.touched) && dateRetour.hasError('required')">La
         date de retour est obligatoire.</mat-error>
@@ -98,7 +98,7 @@
       <mat-form-field required appearance="fill" class="full-width">
         <mat-label>Nom d'étoiles</mat-label>
         <input name="Nom d'étoiles" [(ngModel)]="forfait.hotel.nombreEtoiles" #nombreEtoilesHotel="ngModel" required
-          type="number" step=".50" matInput placeholder="3.5">
+          type="number" step=".50" matInput placeholder="Ex. 3.5">
         <mat-error *ngIf="nombreEtoilesHotel.invalid && (nombreEtoilesHotel.dirty || nombreEtoilesHotel.touched) &&
           nombreEtoilesHotel.hasError('required')">Le nombre d'étoiles est obligatoire.</mat-error>
         <span matSuffix>$&nbsp;</span>
@@ -107,7 +107,7 @@
       <mat-form-field required appearance="fill" class="full-width">
         <mat-label>Nombre de chambres</mat-label>
         <input name="Nombre de chambres" [(ngModel)]="forfait.hotel.nombreChambres" #nombreChambresHotel="ngModel"
-          required type="number" step="1" matInput placeholder="5">
+          required type="number" step="1" matInput placeholder="Ex. 5">
         <mat-error *ngIf=" nombreChambresHotel.invalid && (nombreChambresHotel.dirty || nombreChambresHotel.touched) &&
           nombreChambresHotel.hasError('required')">Le nombre de chambre est obligatoire.</mat-error>
         <span matSuffix>$&nbsp;</span>
@@ -116,7 +116,7 @@
       <mat-form-field required appearance="fill" class="full-width">
         <mat-label>Caractéristiques</mat-label>
         <input name="Caractériques" [(ngModel)]="forfait.hotel.caracteristiques" #caracteristiquesHotel="ngModel"
-          required type="number" step="1" matInput placeholder="caractéristiques">
+          required type="number" step="1" matInput placeholder="Ex. Face à la plage">
         <mat-error *ngIf=" caracteristiquesHotel.invalid && (caracteristiquesHotel.dirty || caracteristiquesHotel.touched) &&
         caracteristiquesHotel.hasError('required')">Les caractéristiques sont obligatoires.</mat-error>
         <span matSuffix>$&nbsp;</span>
