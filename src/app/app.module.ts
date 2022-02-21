@@ -21,7 +21,6 @@ import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.compo
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { EvaluationEtoilesComponent } from './evaluation-etoiles/evaluation-etoiles.component';
-import { FormRechercheComponent } from './form-recherche/form-recherche.component';
 import { ForfaitMiniCandidatPipe } from './forfait-mini-candidat.pipe';
 
 import { DialogFormulaireForfaitsComponent } from './dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
@@ -40,7 +39,6 @@ import { AProposComponent } from './a-propos/a-propos.component';
     ForfaitMiniComponent,
     ForfaitCompletComponent,
     EvaluationEtoilesComponent,
-    FormRechercheComponent,
     ForfaitMiniCandidatPipe,
     ForfaitMiniCandidatPipe,
     DialogFormulaireForfaitsComponent,
