@@ -32,6 +32,7 @@ import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.componen
 import { AProposComponent } from './a-propos/a-propos.component';
 import { ListeForfaitsPaysComponent } from './liste-forfaits-pays/liste-forfaits-pays.component';
 import { LineChartComponent } from './charts/line-chart/line-chart.component';
+import { RadarChartComponent } from './charts/radar-chart/radar-chart.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { LineChartComponent } from './charts/line-chart/line-chart.component';
     AProposComponent,
     ListeForfaitsPaysComponent,
     LineChartComponent,
+    RadarChartComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,6 @@ export class ListeForfaitsPaysComponent implements OnInit {
       this.paysCible =String(params.get('pays'));  
       this.getForfaits(this.paysCible);
     });  
-
   }
 
   getForfaits(iPaysCible:String): void {
