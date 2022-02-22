@@ -22,6 +22,8 @@ export class FormulaireForfaitComponent implements OnInit {
   }
 
   onSave(forfaitForm: NgForm) {
+
+    
     if (forfaitForm.valid) {
       if (this.forfait.id != null && this.forfait.id != '') {
         // Si on a un id, on doit modifier le forfait
@@ -36,5 +38,11 @@ export class FormulaireForfaitComponent implements OnInit {
 
   onCancel() { 
     this.majTableau.emit();
+  }
+
+  updateCaracteristiques(event:any) {
+    console.log("------------> updateCaracteristiques: " + event);
+    this.forfait.hotel.caracteristiques = [];
+    this.forfait.hotel.caracteristiques = [...event];
   }
 }

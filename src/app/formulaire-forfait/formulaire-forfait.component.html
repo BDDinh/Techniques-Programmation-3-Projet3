@@ -105,17 +105,26 @@
           nombreChambresHotel.hasError('required')">Le nombre de chambre est obligatoire.</mat-error>
       </mat-form-field>
 
+      <!--
       <mat-form-field required appearance="fill" class="full-width">
         <mat-label>Caractéristiques</mat-label>
-        <input name="Caractériques" [(ngModel)]="forfait.hotel.caracteristiques" #caracteristiquesHotel="ngModel"
-          required type="number" step="1" matInput placeholder="Ex. Face à la plage">
+        <app-chip-input [listeItems]="forfait.hotel.caracteristiques" [(ngModel)]="forfait.hotel.caracteristiques"
+          #caracteristiquesHotel="ngModel"></app-chip-input>
         <mat-error *ngIf=" caracteristiquesHotel.invalid && (caracteristiquesHotel.dirty || caracteristiquesHotel.touched) &&
         caracteristiquesHotel.hasError('required')">Les caractéristiques sont obligatoires.</mat-error>
       </mat-form-field>
+      -->
+
+      <app-chip-input [listeItems]="forfait.hotel.caracteristiques" (listeItemsChange)="updateCaracteristiques($event)">
+      </app-chip-input>
+
+      <div>{{forfait.hotel.caracteristiques}}</div>
+
+
     </section>
 
     <div>
-      <button matSuffix type="submit" mat-raised-button (click)="onCancel()">Annuler</button>&nbsp;
+      <button matSuffix type=" submit" mat-raised-button (click)="onCancel()">Annuler</button>&nbsp;
       <button matSuffix type="submit" mat-raised-button [disabled]="!forfaitForm.form.valid"
         (click)="onSave(forfaitForm)">ok</button>
     </div>

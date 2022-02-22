@@ -4,6 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ForfaitService } from './services/forfait.service';
 import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+
 
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
@@ -33,6 +36,7 @@ import { AProposComponent } from './a-propos/a-propos.component';
 import { ListeForfaitsPaysComponent } from './liste-forfaits-pays/liste-forfaits-pays.component';
 import { LineChartComponent } from './charts/line-chart/line-chart.component';
 import { RadarChartComponent } from './charts/radar-chart/radar-chart.component';
+import { ChipInputComponent } from './components-utilitaires/chip-input/chip-input.component';
 
 
 @NgModule({
@@ -54,6 +58,7 @@ import { RadarChartComponent } from './charts/radar-chart/radar-chart.component'
     ListeForfaitsPaysComponent,
     LineChartComponent,
     RadarChartComponent,
+    ChipInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +73,9 @@ import { RadarChartComponent } from './charts/radar-chart/radar-chart.component'
     MatInputModule,
     MatDialogModule,
     MatCheckboxModule,
+    MatChipsModule,
     ChartsModule,
+    MatIconModule,
   ],
   providers: [ForfaitService],
   bootstrap: [AppComponent]
