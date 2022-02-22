@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ForfaitService } from './services/forfait.service';
 import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
@@ -49,7 +50,6 @@ import { ListeForfaitsPaysComponent } from './liste-forfaits-pays/liste-forfaits
     ListeForfaitsComponent,
     AProposComponent,
     ListeForfaitsPaysComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -64,6 +64,7 @@ import { ListeForfaitsPaysComponent } from './liste-forfaits-pays/liste-forfaits
     MatInputModule,
     MatDialogModule,
     MatCheckboxModule,
+    ChartsModule,
   ],
   providers: [ForfaitService],
   bootstrap: [AppComponent]
