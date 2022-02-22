@@ -24,5 +24,4 @@ export class LineChartComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
 }
