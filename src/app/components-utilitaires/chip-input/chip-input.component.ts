@@ -25,7 +25,7 @@ export class ChipInputComponent implements OnInit {
     const value = (event.value || '').trim();
     if (value) {
       this.listeItems.push(value);
-      console.log(this.listeItems);
+      //console.log(this.listeItems);
       this.listeItemsChange.emit(this.listeItems);
     }
 

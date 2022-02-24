@@ -31,7 +31,7 @@ export class ForfaitService {
   }
 
   deleteForfait(id: string): Observable<Forfait> {
-    console.log("-------> deleteForfait(): " + this.forfaitsUrl + "/" +  id);
+    //console.log("-------> deleteForfait(): " + this.forfaitsUrl + "/" +  id);
     return this.http.delete<Forfait>(this.forfaitsUrl + "/" +  id);
   } 
 }

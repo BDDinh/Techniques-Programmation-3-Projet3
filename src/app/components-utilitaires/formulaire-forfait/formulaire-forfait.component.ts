@@ -41,7 +41,7 @@ export class FormulaireForfaitComponent implements OnInit {
   }
 
   updateCaracteristiques(event:any) {
-    console.log("------------> updateCaracteristiques: " + event);
+    //console.log("------------> updateCaracteristiques: " + event);
     this.forfait.hotel.caracteristiques = [];
     this.forfait.hotel.caracteristiques = [...event];
   }
