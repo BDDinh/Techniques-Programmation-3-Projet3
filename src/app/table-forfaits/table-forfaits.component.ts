@@ -32,7 +32,22 @@ export class TableForfaitsComponent implements OnInit {
 
   onSelect(forfait?: Forfait) {
     if (!forfait) {
-      this.selectedForfait = <Forfait>{}; // {} as Forfait;
+      this.selectedForfait = <Forfait>{
+        destination: "",
+        villeDepart: "",
+        dateDepart:  "",
+        dateRetour: "",
+        prix: 0,
+        rabais: 0,
+        vedette: false,
+        hotel: {
+          nom: "",
+          coordonnees: "",
+          nombreEtoiles: 0,
+          nombreChambres: 0,
+          caracteristiques: [""]
+        }
+      }; // {} as Forfait;
     } else { 
       this.selectedForfait = forfait;
     }

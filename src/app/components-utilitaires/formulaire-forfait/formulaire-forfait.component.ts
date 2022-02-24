@@ -22,8 +22,6 @@ export class FormulaireForfaitComponent implements OnInit {
   }
 
   onSave(forfaitForm: NgForm) {
-
-    
     if (forfaitForm.valid) {
       if (this.forfait._id != null && this.forfait._id != '') {
         // Si on a un id, on doit modifier le forfait
