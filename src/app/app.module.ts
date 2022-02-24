@@ -27,10 +27,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { EvaluationEtoilesComponent } from './evaluation-etoiles/evaluation-etoiles.component';
 import { ForfaitMiniCandidatPipe } from './forfait-mini-candidat.pipe';
 
-import { DialogFormulaireForfaitsComponent } from './dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
+import { DialogFormulaireForfaitsComponent } from './components-utilitaires/dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
 import { TableForfaitsComponent } from './table-forfaits/table-forfaits.component';
-import { LienDetailsComponent } from './lien-details/lien-details.component';
-import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
+import { LienDetailsComponent } from './components-utilitaires/lien-details/lien-details.component';
+import { FormulaireForfaitComponent } from './components-utilitaires/formulaire-forfait/formulaire-forfait.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
 import { AProposComponent } from './a-propos/a-propos.component';
 import { ListeForfaitsPaysComponent } from './liste-forfaits-pays/liste-forfaits-pays.component';

@@ -1,7 +1,7 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Forfait } from '../interfaces/forfait';
-import { ForfaitService } from '../services/forfait.service';
+import { Forfait } from '../../interfaces/forfait';
+import { ForfaitService } from '../../services/forfait.service';
 
 @Component({
   selector: 'app-formulaire-forfait',

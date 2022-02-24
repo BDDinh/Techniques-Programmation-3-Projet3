@@ -13,14 +13,13 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ForfaitService {
-  forfaitsUrl = 'http://localhost/exemple-api-forfaits/api/'; // Changer ici
+  forfaitsUrl = 'http://localhost:3000/forfait'; // Changer ici
 
   constructor(private http: HttpClient) { }
-  //constructor() { }
 
   getForfaits(): Observable<Forfait[]> {
-    const forfaits = FORFAITS;
-    return of(FORFAITS);
+    return this.http.get<Forfait[]>(this.forfaitsUrl);
+    //return of(FORFAITS);
   }
   
   addForfait(forfait: Forfait): Observable<Forfait> {
@@ -28,10 +27,10 @@ export class ForfaitService {
   }
 
   editForfait(forfait: Forfait): Observable<Forfait> {
-    return this.http.put<Forfait>(this.forfaitsUrl + "?id=" + forfait.id, forfait, httpOptions);
+    return this.http.put<Forfait>(this.forfaitsUrl + "/" + forfait.id, forfait, httpOptions);
   }
 
   deleteForfait(id: string): Observable<Forfait> {
-    return this.http.delete<Forfait>(this.forfaitsUrl + "?id=" +  id);
+    return this.http.delete<Forfait>(this.forfaitsUrl + "/" +  id);
   } 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogFormulaireForfaitsComponent } from '../dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
+import { DialogFormulaireForfaitsComponent } from '../components-utilitaires/dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
 import { ForfaitService } from '../services/forfait.service';
 import { Forfait } from '../interfaces/forfait';
 
