@@ -25,7 +25,7 @@ export class FormulaireForfaitComponent implements OnInit {
 
     
     if (forfaitForm.valid) {
-      if (this.forfait.id != null && this.forfait.id != '') {
+      if (this.forfait._id != null && this.forfait._id != '') {
         // Si on a un id, on doit modifier le forfait
         this.forfaitService.editForfait(this.forfait).subscribe(_ => { this.majTableau.emit() });
 

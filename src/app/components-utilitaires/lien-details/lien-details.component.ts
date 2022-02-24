@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-lien-details',
   templateUrl: './lien-details.component.html',
-  styleUrls: ['../shared/shared-styles.css', './lien-details.component.css']
+  styleUrls: ['../../shared/shared-styles.css', './lien-details.component.css'],
 })
 export class LienDetailsComponent implements OnInit {
   chemin = '';
@@ -12,3 +12,6 @@ export class LienDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+
+// ../shared/shared-styles.css
+// './lien-details.component.css

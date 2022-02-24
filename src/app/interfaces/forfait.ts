@@ -1,7 +1,7 @@
 import { Hotel } from "./hotel";
 
 export interface Forfait {
-    id: string,
+    _id: string,
     destination: string;
     villeDepart: string;
     hotel: Hotel;

@@ -27,10 +27,11 @@ export class ForfaitService {
   }
 
   editForfait(forfait: Forfait): Observable<Forfait> {
-    return this.http.put<Forfait>(this.forfaitsUrl + "/" + forfait.id, forfait, httpOptions);
+    return this.http.put<Forfait>(this.forfaitsUrl + "/" + forfait._id, forfait, httpOptions);
   }
 
   deleteForfait(id: string): Observable<Forfait> {
+    console.log("-------> deleteForfait(): " + this.forfaitsUrl + "/" +  id);
     return this.http.delete<Forfait>(this.forfaitsUrl + "/" +  id);
   } 
 }
