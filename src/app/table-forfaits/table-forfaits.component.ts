@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogFormulaireForfaitsComponent } from '../components-utilitaires/dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
 import { ForfaitService } from '../services/forfait.service';
 import { Forfait } from '../interfaces/forfait';
+import { Hotel } from '../interfaces/hotel';
 
 @Component({
   selector: 'app-table-forfaits',
@@ -40,7 +41,7 @@ export class TableForfaitsComponent implements OnInit {
         prix: 0,
         rabais: 0,
         vedette: false,
-        hotel: {
+        hotel:<Hotel>{
           nom: "",
           coordonnees: "",
           nombreEtoiles: 0,
