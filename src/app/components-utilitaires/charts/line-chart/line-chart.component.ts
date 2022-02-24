@@ -2,8 +2,6 @@ import { Component, OnInit} from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 import { StatsService } from 'src/app/services/stats.service';
-import { StatsPrix } from '../../../interfaces/stats';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-line-chart',
@@ -18,6 +16,7 @@ export class LineChartComponent implements OnInit {
 
   lineChartData: ChartDataSets[] = [];
   lineChartLabels: Label[] = []; 
+
   lineChartOptions = {responsive: true,};
   lineChartColors: Color[] = [
     {
@@ -29,6 +28,7 @@ export class LineChartComponent implements OnInit {
   lineChartPlugins = [];
   lineChartType: ChartType = 'line';
 
+
   constructor(private statsService:StatsService) { }
 
   ngOnInit(): void {
@@ -37,5 +37,4 @@ export class LineChartComponent implements OnInit {
       this.lineChartLabels = resultat.lineChartLabels;
     });
   }
-  
 }

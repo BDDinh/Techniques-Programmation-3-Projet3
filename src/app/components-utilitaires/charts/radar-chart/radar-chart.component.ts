@@ -11,8 +11,7 @@ import { StatsService } from 'src/app/services/stats.service';
 export class RadarChartComponent implements OnInit {
   public radarChartOptions: RadialChartOptions = {
     responsive: true,
-  }
-  
+  };
   /* 
   public radarChartLabels: Label[] = ['Air France', 'Air Canada', 'Lufthansa', 'Swiss Air', 'British Airways', 'American Airlines', 'Delta Air Lines'];
   public radarChartData: ChartDataSets[] = [ { data: [0, 1, 2, 3, 4, 5, 6], label: 'Parts de marché' } ];
@@ -21,7 +20,6 @@ export class RadarChartComponent implements OnInit {
   radarChartLabels: Label[] = [];
   radarChartData: ChartDataSets[] = [];
   public radarChartType: ChartType = 'radar';
-
   constructor(private statsService:StatsService) { }
 
   ngOnInit(): void {
@@ -30,5 +28,4 @@ export class RadarChartComponent implements OnInit {
       this.radarChartData = resultat.radarChartData;
     });
   }
-
 }

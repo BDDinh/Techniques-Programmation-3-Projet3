@@ -34,8 +34,8 @@ import { FormulaireForfaitComponent } from './components-utilitaires/formulaire-
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
 import { AProposComponent } from './a-propos/a-propos.component';
 import { ListeForfaitsPaysComponent } from './liste-forfaits-pays/liste-forfaits-pays.component';
-import { LineChartComponent } from './charts/line-chart/line-chart.component';
-import { RadarChartComponent } from './charts/radar-chart/radar-chart.component';
+import { LineChartComponent } from './components-utilitaires/charts/line-chart/line-chart.component';
+import { RadarChartComponent } from './components-utilitaires/charts/radar-chart/radar-chart.component';
 import { ChipInputComponent } from './components-utilitaires/chip-input/chip-input.component';
 
 

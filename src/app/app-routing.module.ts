@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AProposComponent } from './a-propos/a-propos.component';
-import { LineChartComponent } from './charts/line-chart/line-chart.component';
 import { ListeForfaitsPaysComponent } from './liste-forfaits-pays/liste-forfaits-pays.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
 import { TableForfaitsComponent } from './table-forfaits/table-forfaits.component';
