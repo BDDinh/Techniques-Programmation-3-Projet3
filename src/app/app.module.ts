@@ -18,22 +18,22 @@ import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PiedPageComponent } from './pied-page/pied-page.component';
-import { EnteteComponent } from './entete/entete.component';
-import { ForfaitMiniComponent } from './forfait-mini/forfait-mini.component';
-import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.component';
+import { PiedPageComponent } from './components-pages/pied-page/pied-page.component';
+import { EnteteComponent } from './components-pages/entete/entete.component';
+import { ForfaitMiniComponent } from './components-utilitaires/forfait-mini/forfait-mini.component';
+import { ForfaitCompletComponent } from './components-utilitaires/forfait-complet/forfait-complet.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { EvaluationEtoilesComponent } from './evaluation-etoiles/evaluation-etoiles.component';
+import { EvaluationEtoilesComponent } from './components-utilitaires/evaluation-etoiles/evaluation-etoiles.component';
 import { ForfaitMiniCandidatPipe } from './forfait-mini-candidat.pipe';
 
 import { DialogFormulaireForfaitsComponent } from './components-utilitaires/dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
-import { TableForfaitsComponent } from './table-forfaits/table-forfaits.component';
+import { TableForfaitsComponent } from './components-pages//table-forfaits/table-forfaits.component';
 import { LienDetailsComponent } from './components-utilitaires/lien-details/lien-details.component';
 import { FormulaireForfaitComponent } from './components-utilitaires/formulaire-forfait/formulaire-forfait.component';
-import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
-import { AProposComponent } from './a-propos/a-propos.component';
-import { ListeForfaitsPaysComponent } from './liste-forfaits-pays/liste-forfaits-pays.component';
+import { ListeForfaitsComponent } from './components-pages/liste-forfaits/liste-forfaits.component';
+import { AProposComponent } from './components-pages/a-propos/a-propos.component';
+import { ListeForfaitsPaysComponent } from './components-pages//liste-forfaits-pays/liste-forfaits-pays.component';
 import { LineChartComponent } from './components-utilitaires/charts/line-chart/line-chart.component';
 import { RadarChartComponent } from './components-utilitaires/charts/radar-chart/radar-chart.component';
 import { ChipInputComponent } from './components-utilitaires/chip-input/chip-input.component';

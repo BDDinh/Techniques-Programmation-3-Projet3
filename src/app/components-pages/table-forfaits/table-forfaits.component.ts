@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogFormulaireForfaitsComponent } from '../components-utilitaires/dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
-import { ForfaitService } from '../services/forfait.service';
-import { Forfait } from '../interfaces/forfait';
+import { DialogFormulaireForfaitsComponent } from '../../components-utilitaires/dialog-formulaire-forfaits/dialog-formulaire-forfaits.component';
+import { ForfaitService } from '../../services/forfait.service';
+import { Forfait } from '../../interfaces/forfait';
 
 @Component({
   selector: 'app-table-forfaits',

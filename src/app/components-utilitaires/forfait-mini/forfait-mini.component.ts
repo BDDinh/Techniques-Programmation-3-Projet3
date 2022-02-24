@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Forfait } from '../interfaces/forfait';
+import { Forfait } from '../../interfaces/forfait';
 import * as moment from 'moment';
 
 @Component({

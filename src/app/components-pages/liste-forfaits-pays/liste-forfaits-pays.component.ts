@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Forfait } from '../interfaces/forfait';
-import { ForfaitService } from '../services/forfait.service';
+import { Forfait } from '../../interfaces/forfait';
+import { ForfaitService } from '../../services/forfait.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
