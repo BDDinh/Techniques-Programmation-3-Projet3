@@ -26,8 +26,6 @@ export class TableForfaitsComponent implements OnInit {
   }
 
   onDelete(forfait: Forfait): void {
-    console.log("------------> onDelete forfait: " + forfait.destination)
-
     this.forfaitService.deleteForfait(forfait._id)
       .subscribe(result => this.forfaits = this.forfaits.filter(p => p !== forfait));
   }
